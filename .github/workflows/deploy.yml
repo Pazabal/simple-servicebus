@@ -30,7 +30,7 @@ jobs:
       run: bicep build servicebus.bicep
 
     - name: Deploy Azure resources
-      run: az deployment group create --resource-group vm_group --template-file ./servicebus.json --parameters namespaceName=<YourNamespaceName>
+      run: az deployment group create --resource-group vm_group --template-file ./servicebus.json --parameters namespaceName=pazservicebus
       env:
         ARM_CLIENT_ID: ${{ secrets.AZURE_CLIENT_ID }}
         ARM_CLIENT_SECRET: ${{ secrets.AZURE_CLIENT_SECRET }}
