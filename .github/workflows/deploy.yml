@@ -3,7 +3,7 @@ name: Deploy Service Bus Namespace
 on:
   push:
     branches:
-      - main  # Adjust to your main branch name
+      - master  # Adjust to your main branch name
 
 jobs:
   deploy:
