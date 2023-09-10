@@ -32,7 +32,7 @@
 //   ]
 // }
 
-resource pazservicebus 'Microsoft.ServiceBus/namespaces@2022-10-01-preview' = {
+resource serviceBus 'Microsoft.ServiceBus/namespaces@2022-10-01-preview' = {
   name: 'pazservicebus'
   location: 'EastUS'
   tags: {
