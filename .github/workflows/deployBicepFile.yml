@@ -6,7 +6,7 @@ jobs:
     steps:
 
       # Checkout code
-    - uses: actions/checkout@master
+    - uses: actions/checkout@complete-deployment-test
 
       # Log into Azure
     - uses: azure/login@v1
