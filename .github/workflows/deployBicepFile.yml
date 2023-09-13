@@ -8,10 +8,12 @@ jobs:
       # Checkout code
     - uses: actions/checkout@main
 
-      # Log into Azure
-    - uses: azure/login@v1
-      with:
-        creds: ${{ secrets.AZURE_CREDENTIALS }}
+      # Set up Azure CLI
+    - name: Set up Azure CLI
+      run: |
+        az login --service-principal -u ${{ secrets.AZURE_CLIENT_ID }} -p ${{ secrets.AZURE_CLIENT_SECRET }} --tenant ${{ secrets.AZURE_TENANT_ID }}
+        az account set --subscription ${{ secrets.AZURE_SUBSCRIPTION }}
+      shell: bash
 
       # Deploy Bicep file
     - name: deploy
