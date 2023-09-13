@@ -19,5 +19,5 @@ jobs:
       with:
         subscriptionId: ${{ secrets.AZURE_SUBSCRIPTION }}
         resourceGroupName: ${{ secrets.AZURE_RG }}
-        template: ./.bicep/servicebus.bicep
+        template: template.bicep
         failOnStdErr: false
